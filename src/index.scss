@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #6a5be2;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.count{
+  position: fixed;
+  display: flex;
+  z-index: 5;
+  h2:nth-child(1){
+    color: white;
+    text-shadow: 2px 2px black;
+    margin-right: 6px;
+  }
+  h2:nth-child(2){
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+}
+.App{
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    img{
+      width: 200px;
+      border-radius: 200px;
+    }
+  }
+}
+.categorylist{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: auto auto;
+}
+@media (max-width: 1383px){
+  .categorylist{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+  }
+}
+.Category {
+  margin-top : 100px;
+  width: 500px;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: #fff;
+  position: relative;
+  .Game{
+    text-align: center;
+    button {
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 30px;
+      border: 0;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: darken(#ff006e, 3%);
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .tip{
+      background: white;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50px;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      h1{
+        color: black;
+        margin: 10px;
+        font-size: 60px;
+        text-decoration: underline;
+      }
+      h2{
+        color: orange;
+      }
+      button{
+        font-family: 'Nunito', sans-serif;
+        border-radius: 30px;
+        padding: 0;
+        border: 0;
+        width: 50px;
+        background-color: transparent;
+        height: 50px;
+        color: black;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        font-size: 30px;
+        margin-top: 0px;
+      }
+    }
+    .tipbutton{
+      font-family: 'Nunito', sans-serif;
+      border-radius: 30px;
+      padding: 0;
+      border: 0;
+      width: 50px;
+      height: 50px;
+      background-color: white;
+      color: #fff;
+      position: absolute;
+      left: 40px;
+      top: 5px;
+      font-size: 0px;
+      margin-top: 0px;
+      cursor: pointer;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .tiph3{
+      position: absolute;
+      color: orange;
+      top: 0;
+      left: 100px;
+    }
+    .tipbutton:hover{
+      transform: scale(1.1);
+    }
+  }
+  .result {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    border: 0;
+    background-color: white;
+    button {
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 30px;
+      border: 0;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: darken(#ff006e, 3%);
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 300px;
+      border-radius: 200px;
+    }
+  }
+  .gamemenu {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color: white;
+    button {
+      font-weight: bold;
+      font-family: 'Nunito', sans-serif;
+      border-radius: 30px;
+      border: 0;
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: darken(#ff006e, 3%);
+      color: #fff;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    h2 {
+      margin-bottom: 0;
+    }
+
+    img {
+      width: 300px;
+      height: 150px;
+      border-radius: 200px;
+    }
+  }
+  .gamemenu:hover{
+    cursor: pointer;
+    transform: scale(1.1)
+  }
+  .progress {
+    height: 10px;
+    border-radius: 30px;
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 35px;
+    margin-top: 20px;
+    position: relative;
+
+    &__inner {
+      height: 100%;
+      border-radius: 30px;
+      width: 80%;
+      background: rgb(18, 231, 48);
+      transition: all 0.3s ease-in-out;
+      background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    }
+    
+    p{
+      right: 0;
+      position: absolute;
+      font-size: 20px;
+      margin-top: 5px;
+    }
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &:before {
+    width: 95%;
+    bottom: -10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 0;
+  }
+
+  &:after {
+    width: 90%;
+    bottom: -20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    .buttonlist {
+      padding: 15px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 2px solid rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      cursor: pointer;
+      font-weight: normal;
+      transition: all 0.1s ease-in-out;
+      background-color: transparent;
+      color: black;
+      text-align: start;
+      font-size: 17px;
+      p{
+        font-size: 11px;
+      }
+      &:hover {
+        border: 2px solid rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px){
+  .count{
+    position: fixed;
+    z-index: 5;
+    h2:nth-child(1){
+      color: black;
+      text-shadow: 0.5px 0.5px white;
+      margin-right: 6px;
+    }
+    h2:nth-child(2){
+      color: black;
+      text-shadow: 0.5px 0.5px white;
+    }
+  }
+  .App{
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    ul{
+      display: grid;
+      grid-template-columns: auto auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      img{
+        width: 200px;
+        border-radius: 200px;
+      }
+    }
+  }
+  .categorylist{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 1383px){
+    .categorylist{
+      display: grid;
+      justify-content: center;
+      grid-template-columns: auto;
+    }
+  }
+  .Category{
+    margin-top : 100px;
+    width: 300px;
+    border-radius: 30px;
+    padding: 40px;
+    background-color: #fff;
+    position: relative;
+    .Game{
+      text-align: center;
+      button {
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
+        border-radius: 30px;
+        border: 0;
+        padding: 5px 15px;
+        font-size: 20px;
+        background-color: darken(#ff006e, 3%);
+        color: #fff;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .tip{
+        background: white;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        h1{
+          color: black;
+          margin: 10px;
+          font-size: 30px;
+          text-decoration: underline;
+        }
+        h2{
+          color: orange;
+          font-size: 20px;
+          padding: 10px;
+        }
+        button{
+          font-family: 'Nunito', sans-serif;
+          border-radius: 30px;
+          padding: 0;
+          border: 0;
+          width: 50px;
+          background-color: transparent;
+          height: 50px;
+          color: black;
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          font-size: 15px;
+          margin-top: 0px;
+        }
+      }
+      .tipbutton{
+        font-family: 'Nunito', sans-serif;
+        border-radius: 30px;
+        padding: 0;
+        border: 0;
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        color: #fff;
+        position: absolute;
+        left: 40px;
+        top: 5px;
+        font-size: 0px;
+        margin-top: 0px;
+        cursor: pointer;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .tiph3{
+        position: absolute;
+        color: orange;
+        top: -4px;
+        left: 85px;
+      }
+      .tipbutton:hover{
+        transform: scale(1.1);
+      }
+    }
+    .result {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+      border: 0;
+      background-color: white;
+      button {
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
+        border-radius: 30px;
+        border: 0;
+        padding: 15px 30px;
+        font-size: 25px;
+        background-color: darken(#ff006e, 3%);
+        color: #fff;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+  
+      img {
+        width: 300px;
+        border-radius: 200px;
+      }
+    }
+    .gamemenu {
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      background-color: white;
+      button {
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
+        border-radius: 30px;
+        border: 0;
+        padding: 15px 30px;
+        font-size: 20px;
+        background-color: darken(#ff006e, 3%);
+        color: #fff;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      h2 {
+        margin-bottom: 0;
+      }
+  
+      img {
+        width: 200px;
+        height: 100px;
+        border-radius: 200px;
+      }
+    }
+    .gamemenu:hover{
+      cursor: pointer;
+      transform: scale(1.1)
+    }
+    .progress {
+      height: 10px;
+      border-radius: 30px;
+      background-color: rgb(232, 232, 232);
+      margin-bottom: 35px;
+      margin-top: 20px;
+      position: relative;
+  
+      &__inner {
+        height: 100%;
+        border-radius: 30px;
+        width: 80%;
+        background: rgb(18, 231, 48);
+        transition: all 0.3s ease-in-out;
+        background: linear-gradient(90deg, rgba(18, 231, 48, 1) 0%, rgba(0, 212, 255, 1) 100%);
+      }
+      
+      p{
+        right: 0;
+        position: absolute;
+        font-size: 15px;
+        margin-top: 5px;
+      }
+    }
+  
+    &:before,
+    &:after {
+      content: '';
+      display: block;
+      height: 50px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    &:before {
+      width: 95%;
+      bottom: -10px;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 0;
+    }
+  
+    &:after {
+      width: 90%;
+      bottom: -20px;
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: 1;
+    }
+  
+    h1 {
+      margin: 0;
+      font-size: 25px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+  
+      .buttonlist {
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: normal;
+        transition: all 0.1s ease-in-out;
+        background-color: transparent;
+        color: black;
+        text-align: start;
+        font-size: 15px;
+        p{
+          font-size: 11px;
+        }
+        &:hover {
+          border: 2px solid rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+}
