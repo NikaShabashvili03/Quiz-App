@@ -1,5 +1,3 @@
-
-
 export function Result({correct, maxquestion}) {
   return (
     <div className="result">

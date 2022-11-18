@@ -4,8 +4,9 @@ import { Result } from './Result';
 import '../index.scss';
 import { Gamemenu } from './Gamemenu';
 
-export const Category = ({score,setScore,category}) => {
+export const Category = ({categorypercentage ,stepCategory, setStepCategory,score,setScore,category}) => {
 const maxquestion = 10;
+console.log(categorypercentage);
 const [result, setResult] = useState([]);
 useEffect(()=>{
     let arr = [];
@@ -57,6 +58,9 @@ const nextStep = (e) => {
     setDisabled(false);
     setMyStyle(false);
     setStep(step + 1);
+    if(step == maxquestion - 1){
+        setStepCategory(stepCategory + 1);
+    }
 }
 const question = category.List[result[step]];
     return(
@@ -64,7 +68,7 @@ const question = category.List[result[step]];
             {start == true 
                 ? (step !== maxquestion
                     ? <Game score={score} setScore={setScore} tipModal={tipModal} setTipModal={setTipModal} Countone={Countone} disabled={disabled} styleColor={styleColor} MyStyle={myStyle} nextStep={nextStep} result={result} maxquestion={maxquestion} step={step} question={question} onClickVariant={onClickVariant} />
-                    : <Result maxquestion={maxquestion} score={score} setScore={setScore} correct={correct} /> 
+                    : (<Result maxquestion={maxquestion} score={score} setScore={setScore} correct={correct} />)
                 )
                 : (
                  <Gamemenu Logo={category.Logo} category={category} setStart={setStart}/>
