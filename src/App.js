@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Category } from './components/Category';
 import { EndGame } from './components/EndGame';
 import { StartGame } from './components/StartGame';
 import './index.scss';
