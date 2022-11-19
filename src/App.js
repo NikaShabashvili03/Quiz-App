@@ -6,7 +6,7 @@ import { questions } from './questions/questions';
 import { FirstGamemenu } from './components/FirstGamemenu';
 
 function App() {
-  const [score, setScore] = useState(20);
+  const [score, setScore] = useState(0);
   const full = questions.length;
   const [stepCategory, setStepCategory] = useState(0);
   const categorypercentage = Math.round((stepCategory / full) * 100);
