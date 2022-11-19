@@ -119,28 +119,6 @@ export const questions = [
       // },
     ],
   },
-
-
-  // ------------------------------------ IMPORTAANT !!!! ---------------------------------------
-  // If you are creating a new category, you must create it with at least 10 questions!!!!!!
-  // --------------------------------------------------------------------------------------------
-  // {
-  //   Category: '',  // Category Name
-  //   Logo: '', // Category Image / Logo
-  //   List: [
-  //     // ------- EXAMPLE --------
-  //     // {
-  //     //   title: '',   // Question Title
-  //     //   variants: [
-  //     //   '', // 1 Question (0)
-  //     //   '', // 2 Question (1)
-  //     //   ''  // 3 Question (2)
-  //     // ],
-  //     // correct: 0, // Correct Answer
-  //     // tip: '', // Question Tip
-  //     // },
-  //   ],
-  // },
   {
     Category: 'Space quiz',
     Logo: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/932C/production/_125867673_7b225922-30ad-494e-af75-c0127a9dba16.jpg',
@@ -202,7 +180,7 @@ export const questions = [
         'The beatles',
         'Yuri Gagarin'
       ],
-      correct: 3,
+      correct: 2,
       tip: 'He was first human in space',
       },
       {
@@ -260,4 +238,26 @@ export const questions = [
       // },
     ],
   }
+
+
+  // ------------------------------------ IMPORTAANT !!!! ---------------------------------------
+  // If you are creating a new category, you must create it with at least 10 questions!!!!!!
+  // --------------------------------------------------------------------------------------------
+  // {
+  //   Category: '',  // Category Name
+  //   Logo: '', // Category Image / Logo
+  //   List: [
+  //     // ------- EXAMPLE --------
+  //     // {
+  //     //   title: '',   // Question Title
+  //     //   variants: [
+  //     //   '', // 1 Question (0)
+  //     //   '', // 2 Question (1)
+  //     //   ''  // 3 Question (2)
+  //     // ],
+  //     // correct: 0, // Correct Answer
+  //     // tip: '', // Question Tip
+  //     // },
+  //   ],
+  // },
 ];

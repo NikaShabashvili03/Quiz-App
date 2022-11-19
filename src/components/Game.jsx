@@ -1,14 +1,14 @@
 import { TipButton } from "./TipButton";
 import { TipModal } from "./TipModal";
 
-export function Game({score, setScore, tipModal,disabled,setTipModal, Countone, styleColor, MyStyle, nextStep,step, question, onClickVariant, maxquestion}) {
+export function Game({setHintCount,hintCount,score, setScore, tipModal,disabled,setTipModal, Countone, styleColor, MyStyle, nextStep,step, question, onClickVariant, maxquestion}) {
     const percentage = Math.round((step / maxquestion) * 100);
     console.log(score);
     return (
       <div className="Game">
         {score >= 5
-          ? <TipButton disabled={disabled} score={score} setScore={setScore} setTipModal={setTipModal}/>
-          : <h3 style={{marginLeft: '-60px'}} className="tiph3">Tip Price: 5$</h3>
+          ? <TipButton hintCount={hintCount} setHintCount={setHintCount} disabled={disabled} score={score} setScore={setScore} setTipModal={setTipModal}/>
+          : <h3 style={{marginLeft: '-60px'}} className="tiph3">Hint Price: 5$</h3>
         }
         <div className="progress">
           <div style={{ width: `${percentage}%` }} className="progress__inner"></div>

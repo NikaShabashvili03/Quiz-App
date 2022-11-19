@@ -5,7 +5,7 @@ export const TipModal = ({setTipModal,question}) => {
                 setTipModal(false)
             }}>X</button>
             <h1>
-                Tip
+                Hint
             </h1>
             <h2>
                 {question.tip}

@@ -4,7 +4,7 @@ import { Result } from './Result';
 import '../index.scss';
 import { Gamemenu } from './Gamemenu';
 
-export const Category = ({categorypercentage ,stepCategory, setStepCategory,score,setScore,category}) => {
+export const Category = ({hintCount,setHintCount,categorypercentage ,stepCategory, setStepCategory,score,setScore,category}) => {
 const maxquestion = 10;
 console.log(categorypercentage);
 const [result, setResult] = useState([]);
@@ -38,8 +38,6 @@ const onClickVariant = (index, e) => {
     ...myStyle,
     [index]: !prevState[index]
     }))
-    setCountone("-1 Score");
-    setScore(score - 1);
     if(score == 0){
         setScore(score - 0);
         setCountone("");
@@ -67,7 +65,7 @@ const question = category.List[result[step]];
         <div className="Category" style={{margin: '30px'}}>
             {start == true 
                 ? (step !== maxquestion
-                    ? <Game score={score} setScore={setScore} tipModal={tipModal} setTipModal={setTipModal} Countone={Countone} disabled={disabled} styleColor={styleColor} MyStyle={myStyle} nextStep={nextStep} result={result} maxquestion={maxquestion} step={step} question={question} onClickVariant={onClickVariant} />
+                    ? <Game hintCount={hintCount} setHintCount={setHintCount} score={score} setScore={setScore} tipModal={tipModal} setTipModal={setTipModal} Countone={Countone} disabled={disabled} styleColor={styleColor} MyStyle={myStyle} nextStep={nextStep} result={result} maxquestion={maxquestion} step={step} question={question} onClickVariant={onClickVariant} />
                     : (<Result maxquestion={maxquestion} score={score} setScore={setScore} correct={correct} />)
                 )
                 : (
