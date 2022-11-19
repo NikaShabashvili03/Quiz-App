@@ -141,4 +141,123 @@ export const questions = [
   //     // },
   //   ],
   // },
+  {
+    Category: 'Space quiz',
+    Logo: 'https://ichef.bbci.co.uk/news/976/cpsprodpb/932C/production/_125867673_7b225922-30ad-494e-af75-c0127a9dba16.jpg',
+    List: [
+      {
+        title: 'How many planets are in solar system?',
+        variants: [
+        '8',
+        '10',
+        '9',
+      ],
+      correct: 0,
+      tip: 'We are not in 2006 anymore',
+      },
+      {
+        title: 'Which galaxy is closest to the milky way?',
+        variants: [
+        'Blasphemus',
+        'Watery way',
+        'Andromeda'
+      ],
+      correct: 2,
+      tip: 'The galaxy closest to ours galaxy',
+      },
+      {
+        title: 'What is a light year?',
+        variants: [
+        'Distance which light covers in one year',
+        'When year has passed so fast, that we didn"t even notice',
+        'Asteroid'
+      ],
+      correct: 0,
+      tip: '9.46 trillion kilometers',
+      },
+      {
+        title: 'Biggest moon in our solar system?',
+        variants: [
+        'Marcus',
+        'Ganymede',
+        'Homer'
+      ],
+      correct: 2,
+      tip: 'Divine hero from troy',
+      },
+      {
+        title: 'Which of these objects is interstellar?',
+        variants: [
+        'Matthew Mcconaughey',
+        'Moon',
+        'Oumuamua'
+      ],
+      correct: 0,
+      tip: 'Choose wisely',
+      },
+      {
+        title: 'Who was first human in space ?',
+        variants: [
+        'Neil Armstrong',
+        'The beatles',
+        'Yuri Gagarin'
+      ],
+      correct: 3,
+      tip: 'He was first human in space',
+      },
+      {
+        title: 'The first human made object on mars was ?',
+        variants: [
+        'Samurai 3',
+        'Viking 1',
+        'Ninja 4'
+      ],
+      correct: 1,
+      tip: 'Name comes from people who were excellent seafarers and lived in very cold country',
+      },
+      {
+        title: 'Closest star to earth?',
+        variants: [
+        'Proxima Centauri',
+        'Betelgeuse',
+        'Sun'
+      ],
+      correct: 2,
+      tip: 'Think about this question twice',
+      },
+      {
+        title: 'Name of space mission which plans to land people on moon?',  
+        variants: [
+        'Artemis 5', 
+        'Orion', 
+        'Blazer'  
+      ],
+      correct: 0,
+      tip: 'Artemis 1 + 4', 
+      },
+      {
+        title: 'Name of hubble one of the most iconic pictures?',  
+        variants: [
+        'Blue dot', 
+        'Black hole image', 
+        'Pillars of creation'  
+      ],
+      correct: 2,
+      tip: 'The breathtaking pillars of ....', 
+      },
+
+
+      // ------- EXAMPLE --------
+      // {
+      //   title: '',   // Question Title
+      //   variants: [
+      //   '', // 1 Question (0)
+      //   '', // 2 Question (1)
+      //   ''  // 3 Question (2)
+      // ],
+      // correct: 0, // Correct Answer
+      // tip: '', // Question Tip
+      // },
+    ],
+  }
 ];
